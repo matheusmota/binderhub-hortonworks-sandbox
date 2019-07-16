@@ -5,7 +5,7 @@ COPY . .
 # using root
 USER root
 RUN yum -y update && \
-    yum -y install https://centos7.iuscommunity.org/ius-release.rpm  && 
+    yum -y install https://centos7.iuscommunity.org/ius-release.rpm  && \
     yum -y install yum-utils python36u python36u-pip python36u-devel htop wget curl 
 
 # ensuring the installation of the notebook package
