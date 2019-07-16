@@ -12,3 +12,9 @@ RUN pip3.6 -v && \
     pip3.6 install --upgrade pip && \ 
     pip3.6 install notebook jupyter jupyterlab 
 # making building process faster by selecting best mirror
+
+RUN echo "127.0.0.1       localhost sandbox-hdp.hortonworks.com sandbox-hdf.hortonworks.com" >> /etc/hosts
+
+USER maria_dev
+
+ENTRYPOINT ["/usr/sbin/init"]
