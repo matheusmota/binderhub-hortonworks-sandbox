@@ -9,6 +9,6 @@ RUN yum -y install https://centos7.iuscommunity.org/ius-release.rpm  && \
 
 # ensuring the installation of the notebook package
 RUN pip3.6 -v && \
-    pip3.6 --upgrade pip && \ 
-    pip3.6 install install notebook jupyter jupyterlab 
+    pip3.6 install --upgrade pip && \ 
+    pip3.6 install notebook jupyter jupyterlab 
 # making building process faster by selecting best mirror
