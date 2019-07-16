@@ -8,7 +8,7 @@ RUN yum update && \
     yum install python3 python3-pip -y
 
 # ensuring the installation of the notebook package
-RUN pip install --no-cache notebook jupyter jupyterlab apt-select
+RUN pip3 install --no-cache notebook jupyter jupyterlab 
 # making building process faster by selecting best mirror
 RUN apt-select --country BR && mv sources.list /etc/apt/
 
