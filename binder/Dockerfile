@@ -4,8 +4,8 @@ COPY . .
 
 # using root
 USER root
-RUN yum update && \
-    yum install python3 python3-pip -y
+RUN yum -y update && \
+    yum -y install yum-utils python36u python36u-pip htop
 
 # ensuring the installation of the notebook package
 RUN pip3 install --no-cache notebook jupyter jupyterlab 
