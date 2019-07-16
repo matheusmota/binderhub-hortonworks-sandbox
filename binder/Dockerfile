@@ -4,6 +4,8 @@ COPY . .
 
 # using root
 USER root
+RUN apt-get update && \
+    apt-get install python3 python3-pip -y
 
 # ensuring the installation of the notebook package
 RUN pip install --no-cache notebook jupyter jupyterlab apt-select
